@@ -5,9 +5,6 @@
 }
 
 .body {
-    /* display: flex;
-                        flex-direction: column; */
-    /* justify-content: center; */
     background-image: url('../images/desktop2.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +21,7 @@
     border: solid 3px gray;
     padding: 20px 50px;
     background-color: rgba(250, 235, 215, 0.9);
-    
+
 
     .header {
         margin: 0 auto;
@@ -42,8 +39,14 @@
     min-width: 300px;
     margin: inherit;
 
+    .info {
+        display: inline-block;
+        margin: auto auto;
+    }
+
     .avatar {
         margin: 10px 30px;
+        max-height: 200px;
     }
 
 }
@@ -81,8 +84,4 @@
         height: 20px;
         cursor: pointer;
     }
-}
-
-Card {
-    height: 500px;
 }

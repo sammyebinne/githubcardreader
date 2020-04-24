@@ -3,9 +3,8 @@ import '../css/styles.scss';
 
 
 class Card extends Component {
-
     render() {
-        
+
         const profile = this.props;
 
         return (
@@ -13,13 +12,27 @@ class Card extends Component {
             <div className="github-profile">
                 <img className="avatar" src={profile.avatar_url} alt="" />
                 <div className="info">
-                    <div className="name">{profile.name}</div>
-                    <div className="company">{profile.company}</div>
-                    <div className="location">{profile.location}</div>
+                    <div className="name">
+                        <strong>
+                            Name:
+                        </strong>{profile.name}
+                    </div>
+                    <div className="company">
+                        <strong>
+                            Company:
+                        </strong>{profile.company}
+                    </div>
+                    <div className="location">
+                        <strong>
+                            Location: 
+                        </strong>{profile.location}
+                    </div>
                 </div>
             </div>
 
         )
+
+
 
     }
 }

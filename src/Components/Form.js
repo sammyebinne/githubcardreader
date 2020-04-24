@@ -3,10 +3,15 @@ import axios from 'axios';
 
 class Form extends Component {
 
-  
-        state = {
-            userName: '',
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            userName: ''
         }
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
 
     handleSubmit = async (event) => {
@@ -15,10 +20,10 @@ class Form extends Component {
 
         const resp = await axios.get(
             `https://api.github.com/users/${this.state.userName}`
-            );
+        );
 
-        this.props.onClick(resp.data);
-        this.setState({ userName:'' });
+        this.props.onFetchInfo(resp.data);
+        this.setState({ userName: '' });
     }
 
     render() {

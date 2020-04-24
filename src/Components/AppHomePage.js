@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardList from './Card';
+import CardList from './CardList';
 import Form from './Form';
 import '../css/styles.scss'
 
@@ -27,7 +27,7 @@ class Home extends Component {
             </h1>
           </div>
 
-          <Form onClick={this.getProfileData} />
+          <Form onFetchInfo={this.getProfileData} />
 
           <CardList profiles={this.state.profiles} />
         </div>
